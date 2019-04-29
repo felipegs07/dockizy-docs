@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Escrevendo Capítulos | Dockizy</title>
+    <style>
+        .topic-special-color:hover {
+            background-color: #0D83CD;
+            color: #000;
+        }
+        .button-special-color {
+            background-color: #0D83CD;
+        }
+        .icon-special-color {
+            background-color: #000;
+        }
+    </style>
+<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+<body>
+    
+<div class="doc">
+    <input id="menu-responsive" type="checkbox">
+    <label for="menu-responsive">
+        <div class="doc__menu-button button-special-color">
+            <a><span class="doc__menu-icon icon-special-color"></span></a>
+        </div>
+    </label>
+
+    <div id="doc-menu" class="doc__menu">
+        <div class="doc__info">
+            
+                <a href="/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
+            
+            
+                <p class="doc__info-text">Dockizy é um tema simples, fácil e rápido para criar documentações.<br><a href="https://github.com/felipegs07/dockizy" target="_blank" rel="noopener">Conheça</a></p>
+            
+        </div>
+        
+                <a href="/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
+        
+                <a href="/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
+        
+                <a href="/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
+        
+                <a href="/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
+        
+    </div>
+
+    <div class="doc__content">
+        <div class="doc__text">
+            <article class="styling-content">
+                <h1>Escrevendo Capítulos</h1>
+                <p>O processo de criação de capítulos na documentação é simples. É necessário abrir o terminal no diretório do tema e executar:</p>
+<pre class=" language-bash"><code class="language-bash">    hexo new chapter <span class="token string">"NOME DO CAPÍTULO"</span>
+</code></pre>
+<p>Depois disso, dentro da pasta <strong>posts</strong> será criado um arquivo com o nome do capítulo no formado <strong>.md (Markdown)</strong>. Nesse arquivo você deverá colocar o conteúdo do capítulo com a formação de <em>Markdown</em>.</p>
+<p>Se você não conhece as regras de formatação de <em>Markdown</em> veja <a href="https://www.markdownguide.org/" target="_blank" rel="noopener">este guia</a>.</p>
+<p>Para selecionar a ordem em que o capítulo aparecerá no menu, é necessário colocar o número correspondente do capítulo. Ele será ordenado de forma crescente, então o 1 será o primeiro e assim por diante.  </p>
+<p>Para alterar a ordem é só colocar o número no front matter do capítulo, localizado no topo do arquivo.</p>
+<pre class=" language-bash"><code class="language-bash">    ---
+    title: Escrevendo Capítulos
+    order: 3 <span class="token operator">&lt;=</span> ordem desse capítulo
+    ---
+</code></pre>
+
+            </article>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Configurações Básicas | Dockizy</title>
+    <style>
+        .topic-special-color:hover {
+            background-color: #0D83CD;
+            color: #000;
+        }
+        .button-special-color {
+            background-color: #0D83CD;
+        }
+        .icon-special-color {
+            background-color: #000;
+        }
+    </style>
+<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+<body>
+    
+<div class="doc">
+    <input id="menu-responsive" type="checkbox">
+    <label for="menu-responsive">
+        <div class="doc__menu-button button-special-color">
+            <a><span class="doc__menu-icon icon-special-color"></span></a>
+        </div>
+    </label>
+
+    <div id="doc-menu" class="doc__menu">
+        <div class="doc__info">
+            
+                <a href="/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
+            
+            
+                <p class="doc__info-text">Dockizy é um tema simples, fácil e rápido para criar documentações.<br><a href="https://github.com/felipegs07/dockizy" target="_blank" rel="noopener">Conheça</a></p>
+            
+        </div>
+        
+                <a href="/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
+        
+                <a href="/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
+        
+                <a href="/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
+        
+                <a href="/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
+        
+    </div>
+
+    <div class="doc__content">
+        <div class="doc__text">
+            <article class="styling-content">
+                <h1>Configurações Básicas</h1>
+                <p>Há algumas poucas configurações básicas que você pode fazer para definir parâmetros como as cores da documentação, título descrição e imagem padrão.</p>
+<p>Essas configuração serão feitas no arquivo <strong>_config.yml</strong> do projeto.</p>
+<h3 id="Configuracoes-do-Tema"><a href="#Configuracoes-do-Tema" class="headerlink" title="Configurações do Tema"></a>Configurações do Tema</h3><p>Logo no topo do arquivo terão as configurações do site, o bloco se encontrará por padrão assim:</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token comment" spellcheck="true"># Site</span>
+    title: Dockizy
+    description: <span class="token operator">></span>-
+    Dockizy é um tema simples, fácil e rápido para criar documentações.
+    img: <span class="token string">"/img/dockizy.png"</span> <span class="token comment" spellcheck="true"># logo of the documentation</span>
+    background_color: <span class="token string">"#0D83CD"</span> <span class="token comment" spellcheck="true"># color of background on hover</span>
+    text_color: <span class="token string">"#000"</span> <span class="token comment" spellcheck="true">#color of the text on hover</span>
+</code></pre>
+<ul>
+<li><strong>title:</strong> o nome do seu projeto ou produto.</li>
+<li><strong>description:</strong> uma pequena descrição da sua documentação, aparecerá no menu lateral.</li>
+<li><strong>img:</strong> imagem do seu projeto que também fica localizada no menu lateral.</li>
+<li><strong>background_color:</strong> cor do <em>background</em> no evento <em>hover</em> nos itens do menu lateral ou no botão de menu na versão <em>mobile</em> (aceita rgb, hex, nome da cor).</li>
+<li><strong>text_color:</strong> cor do texto dos itens do menu no evento <em>hover</em>.</li>
+</ul>
+<h3 id="Configuracoes-de-URL"><a href="#Configuracoes-de-URL" class="headerlink" title="Configurações de URL"></a>Configurações de URL</h3><p>Essas configurações são necessárias para preparar o <strong>Dockizy</strong> para integrar com seu site ou gerar o site estático de forma correta. As configurações de site aparecerá assim:</p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token comment" spellcheck="true"># URL</span>
+    <span class="token comment" spellcheck="true">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
+    url: http://yoursite.com
+    root: /
+    permalink: :title/
+    permalink_defaults:
+</code></pre>
+<ul>
+<li><strong>url:</strong> será o link do seu site, com domínio e etc.</li>
+<li><strong>root:</strong> o root serve para definir um link inicial diferente, se a documentação ficará inicialmente como  <a href="http://yoursite.com/docs/">http://yoursite.com/docs/</a>, o root dele deverá ser configurada aqui. Nesse exemplo ficaria assim:</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">    root: /docs/
+</code></pre>
+<p>Pronto, seu <strong>Dockizy</strong> está pronto para criar sua documentação!</p>
+
+            </article>
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
