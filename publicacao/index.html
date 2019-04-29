@@ -9,16 +9,16 @@
     <style>
         .topic-special-color:hover {
             background-color: #0D83CD;
-            color: #000;
+            color: #fff;
         }
         .button-special-color {
             background-color: #0D83CD;
         }
         .icon-special-color {
-            background-color: #000;
+            background-color: #fff;
         }
     </style>
-<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+<link rel="stylesheet" href="/dockizy-docs/css/prism-ghcolors.css" type="text/css"></head>
 <body>
     
 <div class="doc">
@@ -32,20 +32,20 @@
     <div id="doc-menu" class="doc__menu">
         <div class="doc__info">
             
-                <a href="/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
+                <a href="/dockizy-docs/dockizy-docs/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
             
             
                 <p class="doc__info-text">Dockizy é um tema simples, fácil e rápido para criar documentações.<br><a href="https://github.com/felipegs07/dockizy" target="_blank" rel="noopener">Conheça</a></p>
             
         </div>
         
-                <a href="/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
+                <a href="/dockizy-docs/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
         
-                <a href="/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
+                <a href="/dockizy-docs/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
         
-                <a href="/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
+                <a href="/dockizy-docs/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
         
-                <a href="/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
+                <a href="/dockizy-docs/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
         
     </div>
 
@@ -53,7 +53,41 @@
         <div class="doc__text">
             <article class="styling-content">
                 <h1>Publicação</h1>
-                
+                <p>Depois que sua documentação estiver pronta, é hora de publicar. Para isso existe alguns comandos e várias formas de gerar o site para publicação.</p>
+<h3 id="Gerar-Arquivos-Estaticos"><a href="#Gerar-Arquivos-Estaticos" class="headerlink" title="Gerar Arquivos Estáticos"></a>Gerar Arquivos Estáticos</h3><p>A forma mais simples, gera todo seu site em arquivos estáticos feitos em <em>HTML e CSS</em> numa pasta chamada <strong>public</strong>. Com essa pasta, é possível publicar seu site de várias formas, como <em>FTP</em> e etc.</p>
+<p>Para fazer isso é necessário o comando:</p>
+<pre class=" language-bash"><code class="language-bash">    hexo generate
+</code></pre>
+<h3 id="Deploy-Automatico"><a href="#Deploy-Automatico" class="headerlink" title="Deploy Automático"></a>Deploy Automático</h3><p>Para fazer o <em>deploy</em> automático, é necessário modificar algumas configurações no <strong>_config.yml</strong>.<br>Uma configuração de implantação válida deve ter um <strong>type</strong> que indicará o serviço que será utilizado. Por exemplo:</p>
+<pre class=" language-bash"><code class="language-bash">    deploy:
+        type: <span class="token function">git</span>
+</code></pre>
+<h4 id="Implantacao-com-Git"><a href="#Implantacao-com-Git" class="headerlink" title="Implantação com Git"></a>Implantação com Git</h4><p>Para utilizar o <strong>GitHub Pages</strong> ou o git para implantação é necessário instalar um pacote pelo <em>npm</em></p>
+<pre class=" language-bash"><code class="language-bash">    <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
+</code></pre>
+<p>Depois é necessário editar as configurações no arquivo <strong>_config.yml</strong></p>
+<pre class=" language-bash"><code class="language-bash">    deploy:
+        type: <span class="token function">git</span>
+        repo: <span class="token operator">&lt;</span>repository url<span class="token operator">></span>
+        branch: <span class="token punctuation">[</span>branch<span class="token punctuation">]</span>
+        message: <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+</code></pre>
+<ul>
+<li><strong>repo:</strong> URL do repositório no GitHub/Bitbucket/Coding/GitLab.</li>
+<li><strong>branch:</strong> Qual dos branchs o deploy será implementado. Ele identifica automaticamente o <strong>GitHub</strong>.</li>
+<li><strong>message:</strong> A mensagem customizada que será enviada no <em>commit</em>. O padrão é (<strong>Site updated: [data]</strong>)</li>
+</ul>
+<p>Por exemplo:</p>
+<pre class=" language-bash"><code class="language-bash">    deploy:
+        type: <span class="token function">git</span>
+        repo: https://github.com/felipegs07/dockizy.git
+</code></pre>
+<p>Nesse exemplo ocultando o <em>message</em> para que seja usado a mensagem padrão.</p>
+<p>Depois de configurar é isso, é possível fazer o <em>deploy</em> automático. Para isso use o comando:</p>
+<pre class=" language-bash"><code class="language-bash">    hexo deploy
+</code></pre>
+<p>E pronto, sua documentação estará publicada e pronto para ser utilizada.</p>
+
             </article>
         </div>
     </div>

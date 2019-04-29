@@ -9,16 +9,16 @@
     <style>
         .topic-special-color:hover {
             background-color: #0D83CD;
-            color: #000;
+            color: #fff;
         }
         .button-special-color {
             background-color: #0D83CD;
         }
         .icon-special-color {
-            background-color: #000;
+            background-color: #fff;
         }
     </style>
-<link rel="stylesheet" href="/css/prism-ghcolors.css" type="text/css"></head>
+<link rel="stylesheet" href="/dockizy-docs/css/prism-ghcolors.css" type="text/css"></head>
 <body>
     
 <div class="doc">
@@ -32,20 +32,20 @@
     <div id="doc-menu" class="doc__menu">
         <div class="doc__info">
             
-                <a href="/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
+                <a href="/dockizy-docs/dockizy-docs/"><img class="doc__info-img" src="/img/dockizy.png" alt="logo simplify"></a>
             
             
                 <p class="doc__info-text">Dockizy é um tema simples, fácil e rápido para criar documentações.<br><a href="https://github.com/felipegs07/dockizy" target="_blank" rel="noopener">Conheça</a></p>
             
         </div>
         
-                <a href="/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
+                <a href="/dockizy-docs/introducao/"><div class="doc__menu-topic topic-special-color">Introdução</div></a>
         
-                <a href="/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
+                <a href="/dockizy-docs/configuracoes-basicas/"><div class="doc__menu-topic topic-special-color">Configurações Básicas</div></a>
         
-                <a href="/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
+                <a href="/dockizy-docs/escrevendo-capitulos/"><div class="doc__menu-topic topic-special-color">Escrevendo Capítulos</div></a>
         
-                <a href="/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
+                <a href="/dockizy-docs/publicacao/"><div class="doc__menu-topic topic-special-color">Publicação</div></a>
         
     </div>
 
@@ -55,7 +55,7 @@
                 <h1>Introdução</h1>
                 <p>Bem-vindo a documentação do <strong>Dockizy</strong>, um tema feito em Hexo para a construção de documentação de maneira simples, fácil e rápida.<br>Esse tema foi construído com um gerador de site estático feito em Node.js chamado Hexo, se você encontrar algum problema ao usar o Hexo, dê uma olhada no <a href="https://hexo.io/pt-br/docs/troubleshooting" target="_blank" rel="noopener">guia de soluções de problemas</a>.</p>
 <p>Para utilizar esse tema você não precisará de nenhum conhecimento em javascript, Node.js ou na estruturação de um tema em Hexo. A solução abstrai a tecnologia e com os comandos que você verá nessa documentação você conseguirá construir sua documentação com facilidade.</p>
-<h2 id="Requisitos-Basicos"><a href="#Requisitos-Basicos" class="headerlink" title="Requisitos Básicos"></a>Requisitos Básicos</h2><p>Como algo construido com Node.js, é necessário ter algumas coisas instaladas antes:</p>
+<h3 id="Requisitos-Basicos"><a href="#Requisitos-Basicos" class="headerlink" title="Requisitos Básicos"></a>Requisitos Básicos</h3><p>Como algo construido com Node.js, é necessário ter algumas coisas instaladas antes:</p>
 <ul>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
 <li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
@@ -69,7 +69,10 @@
 <p>Depois acesse o diretório do tema e execute:</p>
 <pre class=" language-bash"><code class="language-bash">    <span class="token function">npm</span> <span class="token function">install</span>
 </code></pre>
-<p>As dependências do tema serão instaladas e você estará pronto para começar a criar sua documentação!</p>
+<p>As dependências do tema serão instaladas e você estará pronto para começar a criar sua documentação.</p>
+<p>Para testar a funcionalidade do tema, é possível iniciar o documentação em um <em>server</em> local de desenvolvimento.</p>
+<pre class=" language-bash"><code class="language-bash">    hexo server
+</code></pre>
 
             </article>
         </div>
